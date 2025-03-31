@@ -1,0 +1,16 @@
+<body>
+<div class="container">
+  <h1 class="title">Detalles de la Cuenta</h1>
+  <div class="content">
+    <div *ngFor="let item of cuenta"> 
+      <p><strong>ID de la Cuenta:</strong> {{ item.idcuenta }}</p>
+      <p><strong>Número de Cuenta:</strong> {{ item.numeroCuenta }}</p>
+      <p><strong>Saldo:</strong> {{ item.saldo }}</p>
+    </div>
+  </div>
+  <button class="transaction-button" (click)="navigateToOperaciones()">Transacciones</button>
+</div>
+</body>
+
+
+

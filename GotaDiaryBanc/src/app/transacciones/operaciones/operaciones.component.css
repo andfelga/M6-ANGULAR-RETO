@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/fondo_main.jpg'); 
+    background-size: cover; ; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh
+  }
+
+.operaciones-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    height: 70px;
+    background-color: rgb(19, 18, 18);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.operaciones-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.operation-button {
+  background-color: #3c86d5; /* Fondo azul */
+  color: white; /* Texto blanco */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.operation-button:hover {
+  background-color: #0b2d51; 
+}
+

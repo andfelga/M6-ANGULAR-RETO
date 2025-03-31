@@ -1,0 +1,30 @@
+.historico-container {
+    text-align: center;
+    margin: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .historico-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .historico-table th, .historico-table td {
+    border: 1px solid #f8f5f5;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .historico-table th {
+    background-color: #0c0c0c;
+    color: white;
+  }
+  
+  .historico-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .historico-table tr:hover {
+    background-color: #ddd;
+  }

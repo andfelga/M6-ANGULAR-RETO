@@ -1,0 +1,28 @@
+<body>
+<div class="historico-container">
+    <h1>Histórico de Transacciones</h1>
+    <div *ngIf="this.historico.length > 0; else noData">
+      <table class="historico-table">
+        <thead>
+          <tr>
+            <th>ID Transacción</th>
+            <th>Tipo</th>
+            <th>Monto</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let transaccion of this.historico"> 
+            <td>{{ transaccion.transaccionid }}</td>
+            <td>{{ transaccion.tipotransaccion }}</td>
+            <td>{{ transaccion.valortransaccion | currency }}</td>
+            <td>{{ transaccion.fechatransaccion | date:'short' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #noData>
+      <p>No hay transacciones disponibles.</p>
+    </ng-template>
+  </div>
+</body>

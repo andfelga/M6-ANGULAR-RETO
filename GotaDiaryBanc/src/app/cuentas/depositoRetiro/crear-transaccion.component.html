@@ -1,0 +1,50 @@
+<div class="title-container">
+  <h1>{{ titulo }}</h1>
+</div>
+
+<div class="form-container">
+  <form (ngSubmit)="confirmarTransaccion()">
+    <div class="form-group">
+      <label for="valorTransaccion">Valor de la transacción</label>
+      <input
+        type="number"
+        id="valorTransaccion"
+        name="valorTransaccion"
+        [(ngModel)]="monto"
+        required
+        class="form-control"
+        placeholder="Ingrese el valor"
+      />
+    </div>
+
+    <div class="form-group" *ngIf="transaccion === 3">
+      <label for="bancoSeleccionado">Seleccione el banco</label>
+      <select
+        id="bancoSeleccionado"
+        name="bancoSeleccionado"
+        [(ngModel)]="bancoSeleccionado"
+        required
+        class="custom-select"
+      >
+        <option value="" disabled selected>Seleccione un banco</option>
+        <option *ngFor="let banco of bancos" [value]="banco.nombre">
+          {{ banco.nombre }}
+        </option>
+      </select>
+
+      <div class="banco-seleccionado" *ngIf="bancoSeleccionado">
+        <img
+          [src]="getBancoImagen(bancoSeleccionado)"
+          [alt]="bancoSeleccionado"
+          width="100"
+          height="100"
+        />
+      </div>
+    </div>
+    <div class="alert alert-danger mt-3" role="alert" *ngIf="bancoError">
+      Por favor, seleccione un banco.
+    </div>
+
+    <button type="submit" class="confirm-button">Confirmar</button>
+  </form>
+</div>

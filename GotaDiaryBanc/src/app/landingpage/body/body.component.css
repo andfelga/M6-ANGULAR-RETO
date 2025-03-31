@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/assets/fondo_main.jpg'); 
+    background-size: cover; ; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh
+  }
+  
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+
+  .image {
+    width: 600px;
+    height: 600px;
+    transition: transform 0.3s ease;
+    border: 5px solid black; 
+    border-radius: 10px; 
+  }
+  
+
+ /* Botón redondo */
+.round-button {
+    background-color: yellow; /* Fondo amarillo */
+    color: black; /* Flecha negra */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Hace el botón redondo */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Altura del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Tamaño de la flecha */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  }
+  
+  .round-button:hover {
+    background-color: gold; /* Cambia a un amarillo más brillante al pasar el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+  }

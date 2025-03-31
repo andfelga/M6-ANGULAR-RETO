@@ -1,0 +1,10 @@
+<body>
+    <div class="operaciones-container">
+      <h1>Operaciones</h1>
+      <div>
+        <button *ngFor="let operacion of operaciones; let i = index" class="operation-button" (click)="handleOperacion(i)">
+          {{ operacion }}
+        </button>
+      </div>
+    </div>
+  </body>
